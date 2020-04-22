@@ -34,7 +34,7 @@ if(!file.exists("~/jhu_coursera/feb.txt")) {
 ## Adjust columns
 feb$Time<-strptime(paste(feb$Date,feb$Time),"%F %T") 
         
-## Create plot 
+## Create plot par
 par(mfcol=c(2,2))
 ## 1) Plot 2
 with(feb, plot(Time, Global_active_power, type="l", xlab=NA, 
@@ -51,7 +51,7 @@ legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
 ## 3) Create plot of voltage vs time
 with(feb, plot(Time, Voltage, xlab="datetime", ylab="Voltage", type="l"))
 
-## 4) Create plot of global_reactive_power
+## 4) Create plot of global_reactive_power vs time
 with(feb, plot(Time, Global_reactive_power, xlab="datetime", 
                ylab="Global_reactive_power", type="l"))
 
